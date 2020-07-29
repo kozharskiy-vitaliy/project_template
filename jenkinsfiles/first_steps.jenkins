@@ -20,11 +20,14 @@ pipeline {
             steps {
                 sh 'ssh root@ubuntu \'uptime\''
             }
+        }
         stage("Third step pwd") {
             steps {
                 sh 'ssh root@ubuntu \'pwd\''
             }
          }
+    
        }
+    
     }
 }
