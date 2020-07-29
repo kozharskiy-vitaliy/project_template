@@ -1,12 +1,13 @@
 #!groovy
 // Run docker build
-// First changes
+
 properties([disableConcurrentBuilds()])
 
 pipeline {
     agent { 
         label 'master'
         }
+    triggers { pollSCM('*****') }
     
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
