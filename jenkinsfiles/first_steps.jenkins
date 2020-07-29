@@ -11,12 +11,12 @@ pipeline {
         timestamps()
     }
     stages {
-        stage("First step") {
+        stage("First step hostname") {
             steps {
                 sh 'ssh root@ubuntu \'hostname\''
             }
         }
-        stage("Second step") {
+        stage("Second step uptime") {
             steps {
                 sh 'ssh root@ubuntu \'uptime\''
             }
