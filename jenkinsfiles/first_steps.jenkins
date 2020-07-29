@@ -26,6 +26,7 @@ pipeline {
                 sh 'ssh root@ubuntu \'pwd\''
             }
          }
+        
     
        }
     
