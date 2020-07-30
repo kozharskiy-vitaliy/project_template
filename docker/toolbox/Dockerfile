@@ -1,4 +1,4 @@
-FROM alpine
+FROM debian:latest
 SHELL ["/bin/bash", "-c"]
 RUN apt update \
 && apt upgrade \
