@@ -37,7 +37,7 @@ pipeline {
         
         stage("docker push") {
             steps {
-                echo " ============== start pushing image =================="
+                echo " ============== start pushing image for kozhvit =================="
                 sh '''
                 docker push kozhvit/toolbox:latest
                 '''
