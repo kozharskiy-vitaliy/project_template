@@ -14,6 +14,16 @@ pipeline {
         timestamps()
     }
     stages {
+        stage("docker login for kozhvit") {
+            steps {
+                echo " ============== docker login for kozhvit =================="
+                withCredentials([usernamePassword(credentialsId: 'dockerhub_kozhvit', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                    sh """
+                    docker login -u $USERNAME -p $PASSWORD
+                    """
+                }
+            }
+        }
         
         stage("create docker image") {
             steps {
